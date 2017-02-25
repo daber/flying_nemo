@@ -9,14 +9,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="flynemo.neofonie.de.flyingnemo.ux.ConnectDeviceActivity"
-    android:id="@+id/main_container"
-    >
+    android:id="@+id/main_container">
 
   <Button
       android:id="@+id/up"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_above="@+id/idle"
+      android:layout_above="@+id/swim"
       android:layout_centerHorizontal="true"
       android:enabled="false"
       android:text="Up"/>
@@ -25,35 +24,44 @@
       android:id="@+id/down"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/idle"
+      android:layout_below="@+id/swim"
       android:layout_centerHorizontal="true"
       android:enabled="false"
       android:text="Down"/>
+
   <Button
       android:id="@+id/right"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_toRightOf="@+id/idle"
+      android:layout_toRightOf="@+id/swim"
       android:layout_centerVertical="true"
       android:enabled="false"
       android:text="Right"/>
+
   <Button
       android:id="@+id/left"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_toLeftOf="@+id/idle"
+      android:layout_toLeftOf="@+id/swim"
       android:layout_centerVertical="true"
       android:enabled="false"
       android:text="Left"/>
 
   <Button
-      android:id="@+id/idle"
+      android:id="@+id/swim"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_centerInParent="true"
       android:enabled="false"
+      android:text="swim"/>
+
+  <Button
+      android:id="@+id/idle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:enabled="false"
       android:text="idle"/>
-
-
 
 </RelativeLayout>

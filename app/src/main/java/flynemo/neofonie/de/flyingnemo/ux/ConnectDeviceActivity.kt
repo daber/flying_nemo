@@ -16,12 +16,12 @@ import flynemo.neofonie.de.flyingnemo.service.NemoService
 class ConnectDeviceActivity : AppCompatActivity() {
     companion object {
         val EXTRA_DEVICE = "EXTRA_DEVICE"
-        val ALL_BUTTONS_ID = intArrayOf(R.id.left, R.id.right, R.id.up, R.id.down, R.id.idle)
+        val ALL_BUTTONS_ID = intArrayOf(R.id.left, R.id.right, R.id.up, R.id.down, R.id.idle, R.id.swim)
         lateinit var ALL_BUTTONS: List<View>
         val TAG = ConnectDeviceActivity::class.java.simpleName
     }
 
-    var device: BluetoothDevice? = null;
+    var device: BluetoothDevice? = null
     lateinit var nemo: NemoService
 
     val connection: ServiceConnection = object : ServiceConnection {
@@ -65,6 +65,7 @@ class ConnectDeviceActivity : AppCompatActivity() {
             R.id.idle -> 'i'
             R.id.up -> 'u'
             R.id.down -> 'd'
+            R.id.swim -> 'f'
             else -> 'i'
         }
         nemo.sendCommand(cmd)
